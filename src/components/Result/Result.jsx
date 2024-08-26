@@ -25,6 +25,10 @@ const Result = ({ groups, results }) => {
   }, []);
 
   useEffect(() => {
+    if (!results || results?.length === 0) return;
+
+    console.log(process.env);
+
     WebApp.offEvent('mainButtonClicked');
     WebApp.onEvent('mainButtonClicked', () => {
       const resultMessage = [];
@@ -60,10 +64,6 @@ const Result = ({ groups, results }) => {
 
       const chatId = WebApp.initDataUnsafe?.user?.id;
       const botToken = process.env.TELEGRAM_BOT_TOKEN;
-
-      console.log(`chatId: ${chatId}\nbotToken: ${botToken}`);
-
-      WebApp.showAlert(`chatId: ${chatId}\nbotToken: ${botToken}`);
 
       if (chatId && botToken) {
         axios.get(`https://api.telegram.org/bot${botToken}/sendMessage`, {
