@@ -61,6 +61,8 @@ const Result = ({ groups, results }) => {
       const chatId = WebApp.initDataUnsafe?.user?.id;
       const botToken = process.env.TELEGRAM_BOT_TOKEN;
 
+      WebApp.showAlert(`chatId: ${chatId}\nbotToken: ${botToken}`);
+
       if (chatId && botToken) {
         axios.get(`https://api.telegram.org/bot${botToken}/sendMessage`, {
           params: {
