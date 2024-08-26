@@ -8,13 +8,13 @@ import Result from '../Result/Result';
 const Prognosis = () => {
   const { setCalcType, formatPrice, formatNumber } = useApp();
 
-  const [budget, setBudget] = React.useState(100);
-  const [cpc, setCpc] = React.useState(100);
-  const [cr1, setCr1] = React.useState(100);
-  const [cr2, setCr2] = React.useState(100);
-  const [averageSales, setAverageSales] = React.useState(100);
-  const [margin, setMargin] = React.useState(100);
-  const [retention, setRetention] = React.useState(100);
+  const [budget, setBudget] = React.useState('');
+  const [cpc, setCpc] = React.useState('');
+  const [cr1, setCr1] = React.useState('');
+  const [cr2, setCr2] = React.useState('');
+  const [averageSales, setAverageSales] = React.useState('');
+  const [margin, setMargin] = React.useState('');
+  const [retention, setRetention] = React.useState('');
 
   const [groups, setGroups] = React.useState([]);
   const [canCalculate, setCanCalculate] = React.useState(false);
