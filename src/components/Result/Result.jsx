@@ -15,7 +15,11 @@ const Result = ({ groups, results }) => {
       color: '#53bd35',
       text_color: '#ffffff',
     });
-    WebApp.MainButton.show();
+    const chatId = WebApp.initDataUnsafe?.user?.id;
+
+    if (chatId) {
+      WebApp.MainButton.show();
+    }
 
     scrollToElement(ref.current);
 
@@ -52,7 +56,9 @@ const Result = ({ groups, results }) => {
       results.forEach((result) => {
         resultMessage.push(`\n\n<b>${result.title}</b>`);
         resultMessage.push(`<blockquote>${result.caption}</blockquote>`);
-        resultMessage.push(`${result.isInvalid ? '❌' : '✅'} ${result.formattedValue} ${result.unit}`);
+        resultMessage.push(
+          `${result.isInvalid ? '❌' : '✅'} ${result.formattedValue} ${result.unit}`,
+        );
       });
 
       resultMessage.push('\n\n---------');
@@ -75,7 +81,6 @@ const Result = ({ groups, results }) => {
         WebApp.close();
       }
     });
-    WebApp.MainButton.show();
   }, [results]);
 
   return (
