@@ -40,7 +40,7 @@ const Result = ({ groups, results }) => {
         group.fields.forEach((field) => {
           resultMessage.push(`\n\n${field.label}`);
           resultMessage.push(`<blockquote>${field.caption}</blockquote>`);
-          resultMessage.push(`‣ ${field.value} ${field.unit}`);
+          resultMessage.push(`‣ ${field.formattedValue} ${field.unit}`);
         });
       });
 
@@ -52,7 +52,7 @@ const Result = ({ groups, results }) => {
       results.forEach((result) => {
         resultMessage.push(`\n\n<b>${result.title}</b>`);
         resultMessage.push(`<blockquote>${result.caption}</blockquote>`);
-        resultMessage.push(`${result.isInvalid ? '❌' : '✅'} ${result.value} ${result.unit}`);
+        resultMessage.push(`${result.isInvalid ? '❌' : '✅'} ${result.formattedValue} ${result.unit}`);
       });
 
       resultMessage.push('\n\n---------');
@@ -85,7 +85,7 @@ const Result = ({ groups, results }) => {
       </div>
 
       <div className="result__grid">
-        {results.map(({ title, caption, value, isInvalid, unit, type }, index) => (
+        {results.map(({ title, caption, formattedValue, isInvalid, unit, type }, index) => (
           <div
             className={classNames(
               'result__item',
@@ -97,7 +97,7 @@ const Result = ({ groups, results }) => {
             {title && <div className="result__item-title _h4">{title}</div>}
             {caption && <div className="result__item-caption">{caption}</div>}
             <div className="result__item-footer">
-              <div className="result__item-value">{value}</div>
+              <div className="result__item-value">{formattedValue}</div>
               {unit && <div className="result__item-unit">{unit}</div>}
             </div>
           </div>
