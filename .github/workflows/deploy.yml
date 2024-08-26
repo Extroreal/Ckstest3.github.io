@@ -33,8 +33,9 @@ jobs:
           make install
 
       - name: 🔨 Build Project
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         run: |
-          export TELEGRAM_BOT_TOKEN=${{ secrets.TELEGRAM_BOT_TOKEN }}
           make build
 
       - name: Deploy to GitHub Pages

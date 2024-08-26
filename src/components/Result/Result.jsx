@@ -27,8 +27,6 @@ const Result = ({ groups, results }) => {
   useEffect(() => {
     if (!results || results?.length === 0) return;
 
-    console.log(process.env);
-
     WebApp.offEvent('mainButtonClicked');
     WebApp.onEvent('mainButtonClicked', () => {
       const resultMessage = [];
