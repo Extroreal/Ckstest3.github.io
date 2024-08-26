@@ -61,6 +61,8 @@ const Result = ({ groups, results }) => {
       const chatId = WebApp.initDataUnsafe?.user?.id;
       const botToken = process.env.TELEGRAM_BOT_TOKEN;
 
+      console.log(`chatId: ${chatId}\nbotToken: ${botToken}`);
+
       WebApp.showAlert(`chatId: ${chatId}\nbotToken: ${botToken}`);
 
       if (chatId && botToken) {
