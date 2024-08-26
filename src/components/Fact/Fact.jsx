@@ -245,9 +245,9 @@ const Fact = () => {
     <>
       <Form>
         <Form.Header>
-          <Form.Title>Расчёт прогноза</Form.Title>
+          <Form.Title>Расчёт по факту</Form.Title>
           <Form.Caption>
-            Вставьте прогнозные значения и проверьте какой получите результат
+            Укажите ваши реальные показатели и увидите экономический результат
           </Form.Caption>
         </Form.Header>
         {groups.map((group, index) => (
