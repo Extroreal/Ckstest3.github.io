@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { DefinePlugin } = require('webpack');
 
 module.exports = {
   entry: './src/index.js',
@@ -65,6 +66,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       minify: false,
+    }),
+    new DefinePlugin({
+      'process.env.TELEGRAM_BOT_TOKEN': JSON.stringify(process.env.TELEGRAM_BOT_TOKEN),
     }),
   ],
 };
