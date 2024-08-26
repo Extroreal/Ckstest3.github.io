@@ -1,0 +1,111 @@
+:root {
+  /* colors */
+
+  --color-grey: #8d8d8d;
+
+  --color-first: #53bd35;
+  --color-first-text: #ffffff;
+
+  --color-second: #ffde00;
+  --color-second-text: #000000;
+
+  --color-error: #eb4747;
+  --color-error-text: #ffffff;
+
+  /* body */
+
+  --body-text-color: var(--color-grey-black-80);
+  --body-line-height: 1.4;
+
+  /* fonts */
+
+  --font-family-base: 'Futura Futuris', 'Arial', sans-serif;
+  --font-family-title: 'Futura Futuris', 'Arial', sans-serif;
+
+  --font-weight-thin: 200;
+  --font-weight-regular: 400;
+  --font-weight-medium: 600;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 800;
+
+  --font-size-micro: 0.8rem;
+  --font-size-small: 0.9rem;
+  --font-size-base: 1rem;
+  --font-size-large: 1.125rem;
+  --font-size-extra: 1.25rem;
+
+  --control-placeholder-color: var(--color-grey-white-40);
+  --control-background-color: #ffffff;
+  --control-border-color: var(--color-grey-white-30);
+  --control-text-color: var(--body-text-color);
+
+  --control-hover-background-color: var(--control-background-color);
+  --control-hover-border-color: var(--color-grey-white-20);
+  --control-hover-text-color: var(--control-text-color);
+
+  --control-focus-background-color: var(--control-background-color);
+  --control-focus-border-color: var(--color-grey-black-20);
+  --control-focus-text-color: var(--control-text-color);
+
+  --control-invalid-background-color: var(--color-error-trans-90);
+  --control-invalid-border-color: var(--color-error-trans-40);
+  --control-invalid-text-color: var(--color-error);
+
+  --control-font-family: var(--font-family-base);
+  --control-font-weight: var(--font-weight-regular);
+
+  /* сontrol micro */
+
+  --control-micro-font-size: var(--font-size-micro);
+  --control-micro-padding-inline: 0.6rem;
+  --control-micro-padding-block: 0.25rem;
+  --control-micro-padding: var(--control-micro-padding-block) var(--control-micro-padding-inline);
+  --control-micro-border-width: 1px;
+  --control-micro-border-radius: 0.25rem;
+
+  /* сontrol small */
+
+  --control-small-font-size: var(--font-size-small);
+  --control-small-padding-inline: 0.75rem;
+  --control-small-padding-block: 0.35rem;
+  --control-small-padding: var(--control-small-padding-block) var(--control-small-padding-inline);
+  --control-small-border-width: 1px;
+  --control-small-border-radius: 0.3rem;
+
+  /* сontrol base */
+
+  --control-font-size: var(--font-size-base);
+  --control-padding-inline: 1rem;
+  --control-padding-block: 0.45rem;
+  --control-padding: var(--control-padding-block) var(--control-padding-inline);
+  --control-border-width: 1px;
+  --control-border-radius: 0.325rem;
+
+  /* сontrol large */
+
+  --control-large-font-size: var(--font-size-base);
+  --control-large-padding-inline: 1.25rem;
+  --control-large-padding-block: 0.6rem;
+  --control-large-padding: var(--control-large-padding-block) var(--control-large-padding-inline);
+  --control-large-border-width: 1px;
+  --control-large-border-radius: 0.325rem;
+
+  /* сontrol extra */
+
+  --control-extra-font-size: var(--font-size-base);
+  --control-extra-padding-inline: 1.5rem;
+  --control-extra-padding-block: 0.75rem;
+  --control-extra-padding: var(--control-extra-padding-block) var(--control-extra-padding-inline);
+  --control-extra-border-width: 1px;
+  --control-extra-border-radius: 0.35rem;
+
+  /* elements */
+
+  --rounded-radius: 6px;
+  --container-padding: 1.25em;
+
+  --backdrop-color: hsl(from var(--color-grey-black-90) h s l / 0.9);
+  --badge-color: hsl(0, 80%, 60%);
+  --badge-text-color: #ffffff;
+  --rating-color: hsl(43, 100%, 50%);
+}

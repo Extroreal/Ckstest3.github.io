@@ -1,0 +1,48 @@
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2em;
+  padding: var(--container-padding);
+}
+
+.main__header {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.main__header-caption {
+  padding-inline: var(--container-padding);
+}
+
+.main__body {
+  padding-inline: var(--container-padding);
+  color: var(--color-grey);
+  font-size: var(--font-size-small);
+}
+
+.main__choise {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.main__choise-button {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1.25em;
+  border-radius: var(--rounded-radius);
+  background-color: var(--color-grey-trans-90);
+
+  & p {
+    margin: 0;
+    font-size: var(--font-size-small);
+    color: var(--color-grey-black-20);
+  }
+}

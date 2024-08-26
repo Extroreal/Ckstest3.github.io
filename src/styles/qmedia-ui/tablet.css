@@ -1,0 +1,16 @@
+@media (768px <= width < 1200px) {
+  :root {
+    /* fonts  */
+
+    --font-size-h6: var(--font-size-base);
+    --font-size-h5: calc(1.1em + 0.125vw);
+    --font-size-h4: calc(1.1em + 0.25vw);
+    --font-size-h3: calc(1.2em + 0.5vw);
+    --font-size-h2: calc(1.3em + 0.75vw);
+    --font-size-h1: calc(1.5em + 1vw);
+
+    /* elements  */
+
+    --feather-width: 22px;
+  }
+}

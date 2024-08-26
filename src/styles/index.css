@@ -1,0 +1,38 @@
+@import '~qmedia-ui/dist/styles/index.css';
+@import './qmedia-ui/index.css' layer(variables);
+
+@import './variables.css' layer(variables);
+
+#react-app {
+  display: contents;
+}
+
+html {
+  height: var(--tg-viewport-stable-height);
+}
+
+body {
+  background-color: #ffffff;
+  font-weight: var(--font-weight-thin);
+  min-height: var(--tg-viewport-stable-height);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.button {
+  font-weight: var(--font-weight-regular);
+}
+
+._h1,
+._h2,
+._h3,
+._h4,
+._h5,
+._h6 {
+  font-weight: var(--font-weight-regular);
+}
+
+.calc {
+}

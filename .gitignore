@@ -1,0 +1,29 @@
+# IDE Helper
+modx_evolution.IDEhelper.php
+_ide_helper.php
+.phpstorm.meta.php
+
+# System
+ftpsync.settings
+Thumbs.db
+Desktop.ini
+.DS_Store
+.idea
+.vagrant
+.rocketeer
+.vscode
+
+# except do not ignore .gitignore
+!.gitignore
+
+# Node.js
+node_modules
+npm-debug.log
+
+# server
+/public/robots.txt
+
+# build
+/public/index.html
+/public/dist
+/deploy.zip

@@ -1,0 +1,6 @@
+.under {
+  box-shadow: inset 0 -0.4em 0 0 var(--color-second);
+  display: inline;
+  text-decoration: underline;
+  text-decoration-color: var(--color-second);
+}
