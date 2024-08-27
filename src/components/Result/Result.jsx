@@ -15,11 +15,7 @@ const Result = ({ groups, results }) => {
       color: '#53bd35',
       text_color: '#ffffff',
     });
-    const chatId = WebApp.initDataUnsafe?.user?.id;
-
-    if (chatId) {
-      WebApp.MainButton.show();
-    }
+    WebApp.MainButton.show();
 
     scrollToElement(ref.current);
 
@@ -29,10 +25,11 @@ const Result = ({ groups, results }) => {
   }, []);
 
   useEffect(() => {
+    WebApp.offEvent('mainButtonClicked');
+
     if (!results || results?.length === 0) return;
 
-    WebApp.offEvent('mainButtonClicked');
-    WebApp.onEvent('mainButtonClicked', () => {
+    WebApp.MainButton.onClick(async () => {
       const resultMessage = [];
 
       resultMessage.push('<b>ИСХОДНЫЕ ДАННЫЕ</b>');
@@ -65,12 +62,11 @@ const Result = ({ groups, results }) => {
       resultMessage.push(
         '\n\n📩 Если у вас возникли вопросы или вы хотите оптимизировать свою маркетинговую стратегию, обратитесь за консультацией @qmediaby.\n\n<i>Мы поможем улучшить ваши результаты!</i>',
       );
-
       const chatId = WebApp.initDataUnsafe?.user?.id;
       const botToken = process.env.TELEGRAM_BOT_TOKEN;
 
-      if (chatId && botToken) {
-        axios.get(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+      try {
+        await axios.get(`https://api.telegram.org/bot${botToken}/sendMessage`, {
           params: {
             chat_id: chatId,
             text: resultMessage.join(''),
@@ -79,6 +75,32 @@ const Result = ({ groups, results }) => {
         });
 
         WebApp.close();
+      } catch (error) {
+        console.error(error);
+
+        const errorMessage = [];
+
+        if (error.code === 'ERR_NETWORK') {
+          errorMessage.push('Ошибка соединения с сервером.');
+          errorMessage.push('Попробуйте позже.');
+          WebApp.showAlert(errorMessage.join('\n'));
+          return;
+        }
+
+        const { response = {} } = error;
+        const { data } = response;
+
+        if (data) {
+          const { error_code: errorCode = '', description = '' } = data;
+          if (errorCode) errorMessage.push(`Ошибка ${errorCode}.`);
+          if (description) errorMessage.push(`"${description}"`);
+          WebApp.showAlert(errorMessage.join('\n'));
+          return;
+        }
+
+        errorMessage.push('Не удалось отправить сообщение.');
+        errorMessage.push('Попробуйте позже.');
+        WebApp.showAlert(errorMessage.join('\n'));
       }
     });
   }, [results]);

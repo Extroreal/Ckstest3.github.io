@@ -17,7 +17,6 @@ const FormField = ({ label, name, value, unit, caption, funnelLvl, setValue = (v
         value={String(value)}
         placeholder="0"
         size="small"
-        type="number"
         inputMode="decimal"
         onBlur={(e) => {
           if (e.target.value === '') {
