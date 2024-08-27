@@ -28,7 +28,7 @@ const Main = () => {
         определить ключевые метрики бизнеса и принимать на их основе решения
       </div>
       <div className="main__choise">
-        <div className="main__choise-title _h3">Выберите тип расчета</div>
+        <div className="main__choise-title _h3">Выберите тип расчёта</div>
         <div className="main__choise-button">
           <Button
             onClick={() => {
@@ -48,7 +48,7 @@ const Main = () => {
             По факту
           </Button>
           <p>
-            У вас есть реальные цифры и нужно знать как с ними работать и какие решения принимать
+            У вас есть реальные цифры, и нужно знать, как с ними работать и какие решения принимать
           </p>
         </div>
       </div>

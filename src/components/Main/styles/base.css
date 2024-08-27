@@ -18,6 +18,7 @@
 
 .main__header-caption {
   padding-inline: var(--container-padding);
+  text-wrap: balance;
 }
 
 .main__body {
@@ -44,5 +45,6 @@
     margin: 0;
     font-size: var(--font-size-small);
     color: var(--color-grey-black-20);
+    text-wrap: balance;
   }
 }

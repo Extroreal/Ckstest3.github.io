@@ -31,12 +31,15 @@
   background-color: var(--color-grey-trans-90);
 }
 
+.form__field-label {
+  text-wrap: balance;
+}
+
 .form__field-row {
   display: flex;
   align-items: baseline;
   gap: 1em;
   font-size: var(--font-size-small);
-  order: 1;
   padding-top: 0.25em;
 }
 
@@ -52,4 +55,10 @@
 .form__field-caption {
   font-size: var(--font-size-small);
   color: var(--color-grey-black-20);
+  text-wrap: balance;
+}
+
+.form__field-error {
+  font-size: var(--font-size-micro);
+  color: var(--color-error);
 }
