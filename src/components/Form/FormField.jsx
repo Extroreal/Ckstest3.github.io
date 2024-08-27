@@ -23,7 +23,7 @@ const FormField = ({ label, name, value, unit, caption, funnelLvl, setValue = (v
             setValue('');
             return;
           }
-          const numberValue = Number(e.target.value);
+          const numberValue = Number(e.target.value.replace(',', '.'));
           setValue(numberValue);
         }}
       />
