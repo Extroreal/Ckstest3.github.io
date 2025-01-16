@@ -24,8 +24,7 @@ const Main = () => {
         <div className="main__header-caption">Опаньки жопаньки</div>
       </div>
       <div className="main__body">
-        Юнит-экономика (unit экономика) — это метод экономического моделирования, позволяющий
-        определить ключевые метрики бизнеса и принимать на их основе решения
+        Бла бла бла бла, я тестирую.
       </div>
       <div className="main__choise">
         <div className="main__choise-title _h3">Выберите тип расчёта</div>
