@@ -19,7 +19,7 @@ const Main = () => {
         <div className="main__header-title _h1">
           Калькулятор
           <br />
-          <Under>Unit-экономики</Under>
+          <Under>Возможно здесь будет что-то от ЦКС, хотя хрен знает.</Under>
         </div>
         <div className="main__header-caption">Опаньки жопаньки</div>
       </div>
